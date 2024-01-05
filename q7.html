@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7 </title>
+</head>
+
+<body>
+    <script>
+        // Prompt the user for a positive integer
+        /* Write JavaScript code that prompts the user to input a positive integer. 
+        It should then print the multiplication table of that number */
+        let userInput = prompt("Enter a positive integer:");
+
+        // Convert the user input to an integer
+        let number = parseInt(userInput);
+
+        // Check if the input is a positive integer
+        if (isNaN(number) || number <= 0) {
+            document.write("Please enter a valid positive integer.");
+        } else {
+            // Print the multiplication table
+            document.write("Multiplication table for " + number + ":", "\n");
+            for (let i = 1; i <= 10; i++) {
+                document.write("\n");
+                document.write(number + " * " + i + " = " + (number * i));
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

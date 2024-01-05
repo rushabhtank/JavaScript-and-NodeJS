@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*  Write a program to Check Whether the Entered Year is Leap Year or not (Hint: A leap year is one that is divisible by 400. 
+        Otherwise, a year that is divisible by 4 but not by 100 is also a leap years. 
+        Other years are not leap years. For example, years 1912, 2000, and 1980 are leaps years, but 1835, 1999, and 1900 are not. */
+
+        // Prompt the user to enter a year
+        let userInput = prompt("Enter a year:");
+
+        // Convert the user input to an integer
+        let year = parseInt(userInput);
+
+        // Check if the input is a valid positive integer
+        if (isNaN(year) || year <= 0) {
+            console.log("Please enter a valid positive year.");
+        } else {
+            // Check if the year is a leap year
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                console.log(year + " is a leap year.");
+            } else {
+                console.log(year + " is not a leap year.");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

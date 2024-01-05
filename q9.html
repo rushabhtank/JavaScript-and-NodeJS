@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*  Write a JavaScript code using function without parameter and without returning datatype type. 
+        Find the late charges applicable for not returning the book to the library on time. Take input as fine per day and number of days. 
+        Total fine is the multiplication of fine per day and number of days. 
+        Find the percentage of marks for 5 subjects. Take input as marks for 5subjects and find the percentage.
+
+        */
+
+        // Function to calculate late charges
+        function calculateLateCharges() {
+            // Take input for fine per day
+            let finePerDay = parseFloat(prompt("Enter the fine per day:"));
+
+            // Take input for number of days overdue
+            let daysOverdue = parseInt(prompt("Enter the number of days overdue:"));
+
+            // Calculate total fine
+            let totalFine = finePerDay * daysOverdue;
+
+            // Display the result
+            document.write("Late Charges: $" + totalFine.toFixed(2));
+        }
+
+        // Function to calculate percentage of marks
+        function calculatePercentage() {
+            // Take input for marks in 5 subjects
+            let marks = [];
+            for (let i = 1; i <= 5; i++) {
+                marks.push(parseFloat(prompt("Enter marks for subject " + i + ":")));
+            }
+
+            // Calculate total marks
+            let totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+
+            // Calculate percentage
+            let percentage = (totalMarks / (5 * 100)) * 100;
+            document.write("\n");
+
+            // Display the result
+            document.write("Percentage of Marks: " + percentage.toFixed(2) + "%");
+        }
+
+        // Call the functions
+        calculateLateCharges();
+        calculatePercentage();
+
+    </script>
+</body>
+
+</html>

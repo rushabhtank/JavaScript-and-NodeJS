@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*Write JavaScript code using function with parameter and with returning datatype to implement 
+        the following operations. Find the total salary deducted. Take input as number of days worked,
+         number of leaves and pay per day. Find the total salary hike. 
+         Take input as salary and percentage of raise received. */
+
+        // Function to calculate total salary deduction
+        function calculateTotalDeduction(daysWorked, leavesTaken, payPerDay) {
+
+            // Calculate total salary deduction
+            let totalDeduction = leavesTaken * payPerDay;
+
+            // Return the result
+            return totalDeduction;
+        }
+
+        // Function to calculate total salary hike
+        function calculateTotalHike(currentSalary, percentageRaise) {
+            // Calculate the amount of raise
+            let raiseAmount = (currentSalary * percentageRaise) / 100;
+
+            // Calculate the new salary after the raise
+            let newSalary = currentSalary + raiseAmount;
+
+            // Return the result
+            return {
+                raiseAmount: raiseAmount,
+                newSalary: newSalary,
+            };
+        }
+
+        // Example usage:
+        // Taking input for total salary deduction
+        let daysWorked = parseInt(prompt("Enter number of days worked:"));
+        let leavesTaken = parseInt(prompt("Enter number of leaves taken:"));
+        let payPerDay = parseFloat(prompt("Enter pay per day:"));
+
+        // Calculate and display total salary deduction
+        let totalDeduction = calculateTotalDeduction(daysWorked, leavesTaken, payPerDay);
+        document.write("Total Salary Deduction: $" + totalDeduction.toFixed(2));
+
+        // Taking input for total salary hike
+        let currentSalary = parseFloat(prompt("Enter current salary:"));
+        let percentageRaise = parseFloat(prompt("Enter percentage of raise received:"));
+
+        // Calculate and display total salary hike
+        let result = calculateTotalHike(currentSalary, percentageRaise);
+        document.write("Total Salary Hike:");
+        document.write("Raise Amount: $" + result.raiseAmount.toFixed(2));
+        document.write("New Salary: $" + result.newSalary.toFixed(2));
+
+    </script>
+</body>
+
+</html>
