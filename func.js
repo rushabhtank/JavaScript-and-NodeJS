@@ -23,9 +23,31 @@ const fun = () => {
 };
 
 console.log(sumFunction(23, 4), "is the total...");
-console.log(typeof sumFunction);
 
 console.log(minus(10, 5), "is the subtraction...");
 
-fun();
+// fun();
 
+console.log(" ");
+const family = ["Rajesh", "Urmila", "Dhruv", "Rushabh"];
+
+family.forEach((val) => {
+  console.log(val);
+});
+
+const num = 2;
+
+const mulyitable = (num) =>{
+  for(let i =1 ; i<=10; i++){
+    console.log(n = i * num );
+  }
+};
+
+mulyitable(num);
+
+const list = [1,2,3,4,5,6]
+
+list.slice(0,2);
+list.splice(2,4);
+
+console.log(list);
